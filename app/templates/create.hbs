@@ -1,0 +1,22 @@
+<h3>Employee Create</h3>
+<br />
+
+<div>
+  <form>
+    <label> Employee Name</label>
+    {{input type="text" name="name" value=model.name}}
+
+    <label> Age</label>
+    {{input type="number" name="age" value=model.age}}
+
+    <label> Email</label>
+    {{input type="email" name="email" value=model.email}}
+
+    <label> salary</label>
+    {{input type="text" name="salary" value=model.salary}}
+
+    <button {{action "submitForm" model}}>Submit</button>
+  </form>
+</div>
+
+{{outlet}}
