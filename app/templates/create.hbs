@@ -1,6 +1,6 @@
-<h3>Employee Create</h3>
+<h3>Employee From</h3>
 <br />
-
+{{! _create.hbs }}
 <div>
   <form>
     <label> Employee Name</label>
@@ -13,7 +13,7 @@
     {{input type="email" name="email" value=model.email}}
 
     <label> salary</label>
-    {{input type="text" name="salary" value=model.salary}}
+    {{input type="number" name="salary" value=model.salary}}
 
     <button {{action "submitForm" model}}>Submit</button>
   </form>

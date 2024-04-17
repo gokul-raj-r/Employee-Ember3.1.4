@@ -19,12 +19,12 @@
         <td>{{employee.salary}}</td>
         {{!-- {{#if record.isHovered}} --}}
         <td><div class="d-flex justify-content-around">
-            {{#link-to "edit"}}
-              <button class="btn btn-sm btn-primary btn-hidden">Button</button>
+            {{#link-to "edit" employee.id}}
+              <button class="btn btn-sm btn-primary btn-hidden">Edit</button>
             {{/link-to}}
 
             {{#link-to "create" "new"}}
-              <button class="btn btn-sm btn-danger btn-hidden">Button</button>
+              <button class="btn btn-sm btn-danger btn-hidden">Delete</button>
             {{/link-to}}
           </div></td>
         {{!-- {{/if}} --}}
