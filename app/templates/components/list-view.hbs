@@ -23,9 +23,10 @@
               <button class="btn btn-sm btn-primary btn-hidden">Edit</button>
             {{/link-to}}
 
-            {{#link-to "create" "new"}}
-              <button class="btn btn-sm btn-danger btn-hidden">Delete</button>
-            {{/link-to}}
+            <button
+              class="btn btn-sm btn-danger btn-hidden"
+              {{action "deleteRecord" employee.id}}
+            >Delete</button>
           </div></td>
         {{!-- {{/if}} --}}
       </tr>
