@@ -63,6 +63,7 @@ export default Route.extend({
       age = age.trim();
       email = email.trim();
       //   salary = salary.trim();
+      name = name.charAt(0).toUpperCase() + name.slice(1);
 
       let employee = { id, name, age, email, salary };
 

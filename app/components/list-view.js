@@ -41,7 +41,7 @@ export default Component.extend({
           console.error("Error:", error);
         });
 
-      this.router.transitionTo("index");
+      this.fetchData();
     },
   },
 });

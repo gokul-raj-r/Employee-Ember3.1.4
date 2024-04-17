@@ -9,18 +9,18 @@ export default Route.extend({
       let { name, age, email, salary } = model;
       console.log(model);
       if (name == undefined || name.trim() == "" || !/^[a-zA-Z]+$/.test(name)) {
-        console.error("Invalid Name");
+        alert("Invalid Name");
         return;
       }
 
       if (
         age == undefined ||
-        0 >= age ||
+        18 > age ||
         age > 80 ||
         age.trim() == "" ||
         !/^[0-9]+$/.test(age)
       ) {
-        console.error("Invalid age", age);
+        alert("Age should between 18 to 80");
         return;
       }
 
@@ -29,7 +29,7 @@ export default Route.extend({
         email.trim() == "" ||
         !/^([\w]+)[a-z0-9.]+@[\w]+\.[\w]+$/.test(email)
       ) {
-        console.error("Invalid email");
+        alert("Invalid email");
         return;
       }
 
@@ -38,7 +38,7 @@ export default Route.extend({
         salary.trim() == "" ||
         !/^[0-9]+$/.test(salary)
       ) {
-        console.error("Invalid salary");
+        alert("Invalid salary");
         return;
       }
 
@@ -46,7 +46,7 @@ export default Route.extend({
       age = age.trim();
       email = email.trim();
       salary = salary.trim();
-
+      name = name.charAt(0).toUpperCase() + name.slice(1);
       let employee = { name, age, email, salary };
 
       this.postEmployeeData(employee);
