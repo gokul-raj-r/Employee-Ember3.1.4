@@ -21,7 +21,6 @@ export default Component.extend({
         console.error("Error fetching data:", error);
       });
   },
-
   actions: {
     deleteRecord(id) {
       console.log("employee id ", id);
@@ -29,7 +28,6 @@ export default Component.extend({
       this.get("ajax")
         .request(`/employee/remove/${id}`, {
           method: "POST",
-          contentType: "application/json",
         })
         .then((response) => {
           // Handle successful response

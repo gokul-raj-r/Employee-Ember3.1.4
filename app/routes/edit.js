@@ -30,13 +30,7 @@ export default Route.extend({
         return;
       }
 
-      if (
-        age == undefined ||
-        0 >= age ||
-        age > 80 ||
-        age.trim() == "" ||
-        !/^[0-9]+$/.test(age)
-      ) {
+      if (age == undefined || 0 >= age || age > 80 || !/^[0-9]+$/.test(age)) {
         console.error("Invalid age", age);
         return;
       }
@@ -60,9 +54,7 @@ export default Route.extend({
       console.log(typeof salary);
 
       name = name.trim();
-      age = age.trim();
       email = email.trim();
-      //   salary = salary.trim();
       name = name.charAt(0).toUpperCase() + name.slice(1);
 
       let employee = { id, name, age, email, salary };
