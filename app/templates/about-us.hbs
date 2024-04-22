@@ -1,0 +1,16 @@
+<h1>About us</h1>
+<div class="flex-center">
+  <h2>{{data}}</h2>
+  <h3>{{dataSub}}</h3>
+</div>
+<div class="flex-center">
+  {{#if isContactVisible}}
+    <button {{action "toggle"}}>close contact</button>
+    {{contact}}
+  {{else}}
+    <button {{action "toggle"}}>Show contact</button>
+  {{/if}}
+
+</div>
+
+{{outlet}}

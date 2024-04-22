@@ -19,7 +19,8 @@
           <td>{{employee.email}}</td>
           <td>{{employee.salary}}</td>
           {{!-- {{#if record.isHovered}} --}}
-          <td><div class="d-flex justify-content-around">
+          <td>
+            <div class="d-flex justify-content-around">
               {{#link-to "edit" employee.id}}
                 <button class="btn btn-sm btn-primary btn-hidden">Edit</button>
               {{/link-to}}
@@ -28,7 +29,8 @@
                 class="btn btn-sm btn-danger btn-hidden"
                 {{action "deleteRecord" employee.id}}
               >Delete</button>
-            </div></td>
+            </div>
+          </td>
           {{!-- {{/if}} --}}
         </tr>
       {{/each}}
