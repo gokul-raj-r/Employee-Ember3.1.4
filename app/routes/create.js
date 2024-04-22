@@ -6,8 +6,8 @@ export default Route.extend(validatemixin, {
   ajax: service(),
 
   actions: {
-    submitForm(model) {
-      let { name, age, email, salary } = model;
+    submitForm(model1) {
+      let { name, age, email, salary } = model1;
 
       name = name.trim();
       age = age.trim();
